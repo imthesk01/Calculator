@@ -33,6 +33,9 @@ html{
     font-size: 40px;
     border: none;
 }
+.epandCalc:hover{
+    background-color:darkcyan;
+} 
 .leftarrow{
     background: url("double-left.png") no-repeat 5px center;
 }
