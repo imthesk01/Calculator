@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <div class="calBody" id="calBody">
         <div class="displayBody">
             <input type="text" type="textBox"  class="equationDisplay" name="equation" id="equation"
@@ -26,85 +25,88 @@
                     >
             </div>
         </div>
-        <div id="sciClacDiv">
-            <div id="operandsDiv">
-                <button type="button" class="sciLayout">( </button>
-                <button type="button" class="sciLayout">) </button>
-                <button type="button" class="sciLayout">MC</button>
-                <button type="button" class="sciLayout">M+</button>
-                <button type="button" class="sciLayout"> M- </button>
-                <button type="button" class="sciLayout"> MR </button>
+        <div>
+            <div id="sciClacDiv">
+                <div id="operandsDiv">
+                    <button type="button" class="sciLayout">( </button>
+                    <button type="button" class="sciLayout">) </button>
+                    <button type="button" class="sciLayout">MC</button>
+                    <button type="button" class="sciLayout">M+</button>
+                    <button type="button" class="sciLayout"> M- </button>
+                    <button type="button" class="sciLayout"> MR </button>
+                </div>
+                <div id="operandsDiv">
+                    <button type="button" class="sciLayout">2 <sup>nd</sup> </button>
+                    <button type="button" class="sciLayout">2 <sup>x</sup> </button>
+                    <button type="button" class="sciLayout">2 <sup>y</sup> </button>
+                    <button type="button" class="sciLayout">2 <sup>2</sup> </button>
+                    <button type="button" class="sciLayout">e </button>
+                    <button type="button" class="sciLayout">e <sup>x</sup> </button>
+                </div>
+                <div id="operandsDiv">
+                    <button type="button" class="sciLayout">1/x </button>
+                    <button type="button" class="sciLayout">X! </button>
+                    <button type="button" class="sciLayout"><sup>y</sup> &radic; X </button>
+                    <button type="button" class="sciLayout">&radic; X</button>
+                    <button type="button" class="sciLayout"> &prod; </button>
+                    <button type="button" class="sciLayout"> In </button>
+                </div>
+                <div id="operandsDiv">
+                    <button type="button" class="sciLayout">Rand </button>
+                    <button type="button" class="sciLayout">tan </button>
+                    <button type="button" class="sciLayout">sin</button>
+                    <button type="button" class="sciLayout">cos</button>
+                    <button type="button" class="sciLayout"> Y <sup>x</sup> </button>
+                    <button type="button" class="sciLayout"> 10 <sup>x</sup> </button>
+                </div>
+                <div id="operandsDiv">
+                    <button type="button" class="deg">Deg </button>
+                    <button type="button" class="sciLayout">tanh </button>
+                    <button type="button" class="sciLayout">sinh</button>
+                    <button type="button" class="sciLayout">cosh</button>
+                    <button type="button" class="sciLayout"> log<sup>y</sup> </button>
+                    <button type="button" class="sciLayout"> log </button>
+                </div>
             </div>
-            <div id="operandsDiv">
-                <button type="button" class="sciLayout">2 <sup>nd</sup> </button>
-                <button type="button" class="sciLayout">2 <sup>x</sup> </button>
-                <button type="button" class="sciLayout">2 <sup>y</sup> </button>
-                <button type="button" class="sciLayout">2 <sup>2</sup> </button>
-                <button type="button" class="sciLayout">e </button>
-                <button type="button" class="sciLayout">e <sup>x</sup> </button>
-            </div>
-            <div id="operandsDiv">
-                <button type="button" class="sciLayout">1/x </button>
-                <button type="button" class="sciLayout">X! </button>
-                <button type="button" class="sciLayout"><sup>y</sup> &radic; X </button>
-                <button type="button" class="sciLayout">&radic; X</button>
-                <button type="button" class="sciLayout"> &prod; </button>
-                <button type="button" class="sciLayout"> In </button>
-            </div>
-            <div id="operandsDiv">
-                <button type="button" class="sciLayout">Rand </button>
-                <button type="button" class="sciLayout">tan </button>
-                <button type="button" class="sciLayout">sin</button>
-                <button type="button" class="sciLayout">cos</button>
-                <button type="button" class="sciLayout"> Y <sup>x</sup> </button>
-                <button type="button" class="sciLayout"> 10 <sup>x</sup> </button>
-            </div>
-            <div id="operandsDiv">
-                <button type="button" class="deg">Deg </button>
-                <button type="button" class="sciLayout">tanh </button>
-                <button type="button" class="sciLayout">sinh</button>
-                <button type="button" class="sciLayout">cosh</button>
-                <button type="button" class="sciLayout"> log<sup>y</sup> </button>
-                <button type="button" class="sciLayout"> log </button>
-            </div>
-        </div>
-        <div  class="InputBody">
-            <div id="operatorsDiv">
-                <input type="button" value="C" class="operators" name="clear" id="clear" onclick="clearEquation()">
-
-                <button class="operators" onclick="backspace(equation.value)"><i class="fas fa-backspace"></i></button>
-                <input type="button" value="%" class="operators" name="div" id="div" onclick="append('%')">
-                <input type="button" value="+/-" class="forthDiv" name="div" id="div"
-                    onclick="plusMinus(equation.value)">
-            </div>
-
-            <div id="operandsDiv">
-                <input type="button" value="7" class="operands" name="add" id="seven" onclick="append('7')">
-                <input type="button" value="8" class="operands" name="sub" id="eight" onclick="append('8')">
-                <input type="button" value="9" class="operands" name="mult" id="nine" onclick="append('9')">
-                <input type="button" value="/" class="forthDiv" name="div" id="div" onclick="append('/')">
-            </div>
-
-            <div id="operandsDiv">
-                <input type="button" value="4" class="operands" name="add" id="four" onclick="append('4')">
-                <input type="button" value="5" class="operands" name="sub" id="five" onclick="append('5')">
-                <input type="button" value="6" class="operands" name="mult" id="six" onclick="append('6')">
-                <input type="button" value="*" class="forthDiv" name="div" id="add" onclick="append('*')">
-            </div>
-
-            <div id="operandsDiv">
-                <input type="button" value="1" class="operands" name="add" id="one" onclick="append('1')">
-                <input type="button" value="2" class="operands" name="sub" id="two" onclick="append('2')">
-                <input type="button" value="3" class="operands" name="mult" id="three" onclick="append('3')">
-                <input type="button" value="-" class="forthDiv" name="div" id="minus" onclick="append('-')">
-            </div>
-
-            <div id="operandsDiv">
-                <input type="button" value="." class="operands" name="add" id="dot" onclick="append('.')">
-                <input type="button" value="0" class="operands" name="sub" id="zero" onclick="append('0')">
-                <input type="button" value="=" class="operands" name="equals" id="evaluate"
-                    onclick="startEvaluation(equation.value)">
-                <input type="button" value="+" class="forthDiv" name="div" id="add" onclick="append('+')">
+            <div  class="InputBody">
+                <div id="operatorsDiv">
+                    <input type="button" value="C" class="operators" name="clear" id="clear" onclick="clearEquation()">
+    
+                    <button class="operators" onclick="backspace(equation.value)"><i class="fas fa-backspace"></i></button>
+                    <input type="button" value="%" class="operators" name="div" id="div" onclick="append('%')">
+                    <input type="button" value="+/-" class="forthDiv" name="div" id="div"
+                        onclick="plusMinus(equation.value)">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="7" class="operands" name="add" id="seven" onclick="append('7')">
+                    <input type="button" value="8" class="operands" name="sub" id="eight" onclick="append('8')">
+                    <input type="button" value="9" class="operands" name="mult" id="nine" onclick="append('9')">
+                    <input type="button" value="/" class="forthDiv" name="div" id="div" onclick="append('/')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="4" class="operands" name="add" id="four" onclick="append('4')">
+                    <input type="button" value="5" class="operands" name="sub" id="five" onclick="append('5')">
+                    <input type="button" value="6" class="operands" name="mult" id="six" onclick="append('6')">
+                    <input type="button" value="*" class="forthDiv" name="div" id="add" onclick="append('*')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="1" class="operands" name="add" id="one" onclick="append('1')">
+                    <input type="button" value="2" class="operands" name="sub" id="two" onclick="append('2')">
+                    <input type="button" value="3" class="operands" name="mult" id="three" onclick="append('3')">
+                    <input type="button" value="-" class="forthDiv" name="div" id="minus" onclick="append('-')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="." class="operands" name="add" id="dot" onclick="append('.')">
+                    <input type="button" value="0" class="operands" name="sub" id="zero" onclick="append('0')">
+                    <input type="button" value="=" class="operands" name="equals" id="evaluate"
+                        onclick="startEvaluation(equation.value)">
+                    <input type="button" value="+" class="forthDiv" name="div" id="add" onclick="append('+')">
+                </div>
+    
             </div>
 
         </div>
@@ -113,10 +115,6 @@
 
 
     </div>
-
-
-
-
 </body>
 
 </html>

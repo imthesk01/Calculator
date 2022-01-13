@@ -20,6 +20,14 @@
 // +++++++++++++++++ //
 // +++++++++++++++++ //
 
+// this calculator can do the basic functions of addition, subtraction, multiplication, division and percentage 
+// using precedence of operators in JavaScript?
+// Solve math problems using order of operations like BODMAS except 'brackets' and 'of'
+// C button will clear all input and output
+//  +/- button will evaluate answer in oppsosite integer sign
+// Scientific Calculator perform no operation 
+// calculation peform 
+
 
 validEq = true
 isOpen = false
@@ -82,7 +90,6 @@ function clearEquation() {
 function backspace(text) {
     document.getElementById("equation").value = text.substring(0, text.length - 1)
 }
-
 
 function startEvaluation(equation) {
 

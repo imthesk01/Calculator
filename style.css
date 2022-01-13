@@ -10,6 +10,7 @@ html{
     margin: auto;
     height: 500px;
     width: 300px;
+    /* 300px */
     min-width: 300px;    
 }
 
@@ -48,7 +49,7 @@ html{
     float: left;
 }
 .resultDisplay{
-    height: 100%;
+    height: 97%;
     width: 70%;
     background-color: rgba(68,68,68,255); 
     font-size: 5vh;
