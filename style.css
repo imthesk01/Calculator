@@ -1,0 +1,131 @@
+/*  */
+/*  */
+/*  */
+/*  */
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+#calBody{
+    background-color: rgba(203,203,203,255);
+    margin: auto;
+    height: 500px;
+    width: 300px;
+    min-width: 300px;    
+}
+
+#sciClacDiv{
+    width: 400px;
+    height: 374px;
+    float: left;
+    display: none;
+}
+.SciCalc{
+    width: 25%;
+    float: left;
+    height: 100%;
+}
+.epandCalc{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68,68,68,255);
+    color: #ffff;
+    font-size: 40px;
+    border: none;
+}
+.leftarrow{
+    background: url("double-left.png") no-repeat 5px center;
+}
+.rightArrow{
+    background: url("double-right.png") no-repeat 5px center;
+}
+
+.displayBody{
+    height: 25%;
+}
+.InputBody{
+    height: 75%;
+    width: 300px; 
+    float: left;
+}
+.resultDisplay{
+    height: 100%;
+    width: 70%;
+    background-color: rgba(68,68,68,255); 
+    font-size: 5vh;
+    color: #ffff;
+    border: none;
+    padding-right: 13px;
+    text-align: right;
+}
+
+.equationDisplay{
+    background-color: rgba(68,68,68,255);
+    height: 50%;
+    width: 100%; 
+    font-size: 5vh;
+    color: #ffff;
+    border: none;
+    padding: 0px;
+    text-align: right;
+}
+
+
+.operators{
+    float: left;
+    background-color: rgba(102,194,255,255);
+    height: 75px;
+    width: 25%;
+    font-size: 25px;
+    color: #ffff;
+    border: 1px solid rgba(203,203,203,255)
+}
+.operators:hover{
+    background-color:darkcyan;
+}
+
+.operands{
+    float: left;
+    background-color: rgba(255,255,255,255);
+    height: 75px;
+    width: 25%;
+    font-size: 25px;
+    border: 1px solid rgba(203,203,203,255)
+}
+
+.forthDiv{
+    float: left;
+    background-color: rgba(0,153,255,255);
+    height: 75px;
+    width: 25%;
+    font-size: 25px;
+    color: #ffff;
+    border: 1px solid rgba(203,203,203,255)
+}
+.forthDiv:hover{
+    background-color:darkcyan;
+}
+
+
+.sciLayout{
+    float: left;
+    background-color: rgb(212, 227, 231);
+    height: 75px;
+    width: 16.65%;
+    font-size: 20px;
+    border: 1px solid rgba(203,203,203,255)
+}
+.deg{
+    float: left;
+    background-color: rgb(212, 227, 231);
+    height: 75px;
+    width: 16.67%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(110,244,244,255);
+    border: 1px solid rgba(203,203,203,255)
+}
+
+.operands:hover{
+    background-color:darkcyan;
+}
+
