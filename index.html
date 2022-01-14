@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="calBody" id="calBody">
+        <div class="displayBody">
+            <input type="text" type="textBox" disabled class="equationDisplay" id="equation"
+                placeholder="enter equation">
+            <div style="height: 50%;">
+                <div class="SciCalc" id="SciCalc">
+                    <button name="btn" class="epandCalc" onclick="OpenScientificLayout()">
+                        <i title="Open Scientific Calculator" id="icon1" class="fas fa-angle-double-left"></i></button>
+                </div>
+                <input disabled type="text" class="resultDisplay" id="result" placeholder="result"
+                    >
+            </div>
+        </div>
+        <div style="height: 70%;">
+            <div id="sciClacDiv">
+                <div id="operandsDiv">
+                    <button name="btn" type="button" class="sciLayout">( </button>
+                    <button name="btn" type="button" class="sciLayout">) </button>
+                    <button name="btn" type="button" class="sciLayout">MC</button>
+                    <button name="btn" type="button" class="sciLayout">M+</button>
+                    <button name="btn" type="button" class="sciLayout"> M- </button>
+                    <button name="btn" type="button" class="sciLayout"> MR </button>
+                </div>
+                <div id="operandsDiv">
+                    <button name="btn" type="button" class="sciLayout">2 <sup>nd</sup> </button>
+                    <button name="btn" type="button" class="sciLayout">2 <sup>x</sup> </button>
+                    <button name="btn" type="button" class="sciLayout">2 <sup>y</sup> </button>
+                    <button name="btn" type="button" class="sciLayout">2 <sup>2</sup> </button>
+                    <button name="btn" type="button" class="sciLayout">e </button>
+                    <button name="btn" type="button" class="sciLayout">e <sup>x</sup> </button>
+                </div>
+                <div id="operandsDiv">
+                    <button name="btn" type="button" class="sciLayout">1/x </button>
+                    <button name="btn" type="button" class="sciLayout">X! </button>
+                    <button name="btn" type="button" class="sciLayout"><sup>y</sup> &radic; X </button>
+                    <button name="btn" type="button" class="sciLayout">&radic; X</button>
+                    <button name="btn" type="button" class="sciLayout"> &prod; </button>
+                    <button name="btn" type="button" class="sciLayout"> In </button>
+                </div>
+                <div id="operandsDiv">
+                    <button name="btn" type="button" class="sciLayout">Rand </button>
+                    <button name="btn" type="button" class="sciLayout">tan </button>
+                    <button name="btn" type="button" class="sciLayout">sin</button>
+                    <button name="btn" type="button" class="sciLayout">cos</button>
+                    <button name="btn" type="button" class="sciLayout"> Y <sup>x</sup> </button>
+                    <button name="btn" type="button" class="sciLayout"> 10 <sup>x</sup> </button>
+                </div>
+                <div id="operandsDiv">
+                    <button name="btn" type="button" class="deg">Deg </button>
+                    <button name="btn" type="button" class="sciLayout">tanh </button>
+                    <button name="btn" type="button" class="sciLayout">sinh</button>
+                    <button name="btn" type="button" class="sciLayout">cosh</button>
+                    <button name="btn" type="button" class="sciLayout"> log<sup>y</sup> </button>
+                    <button name="btn" type="button" class="sciLayout"> log </button>
+                </div>
+            </div>
+            <div  class="InputBody">
+                <div id="operatorsDiv">
+                    <input type="button" value="C" class="operators" name="clear" id="clear" onclick="clearEquation()">
+                    <button name="btn" class="operators" onclick="backspace(equation.value)"><i class="fas fa-backspace"></i></button>
+                    <input type="button" value="%" class="operators" name="div" id="div" onclick="append('%')">
+                    <input type="button" value="+/-" class="forthDiv" name="div" id="div"
+                        onclick="plusMinus(equation.value)">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="7" class="operands" id="seven" onclick="append('7')">
+                    <input type="button" value="8" class="operands" id="eight" onclick="append('8')">
+                    <input type="button" value="9" class="operands"  id="nine" onclick="append('9')">
+                    <input type="button" value="/" class="forthDiv" id="div" onclick="append('/')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="4" class="operands" id="four" onclick="append('4')">
+                    <input type="button" value="5" class="operands" id="five" onclick="append('5')">
+                    <input type="button" value="6" class="operands"  id="six" onclick="append('6')">
+                    <input type="button" value="*" class="forthDiv" id="add" onclick="append('*')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="1" class="operands" id="one" onclick="append('1')">
+                    <input type="button" value="2" class="operands" id="two" onclick="append('2')">
+                    <input type="button" value="3" class="operands"  id="three" onclick="append('3')">
+                    <input type="button" value="-" class="forthDiv" id="minus" onclick="append('-')">
+                </div>
+    
+                <div id="operandsDiv">
+                    <input type="button" value="." class="operands" id="dot" onclick="append('.')">
+                    <input type="button" value="0" class="operands" id="zero" onclick="append('0')">
+                    <input type="button" value="=" class="operands" id="evaluate"
+                        onclick="startEvaluation(equation.value)">
+                    <input type="button" value="+" class="forthDiv" id="add" onclick="append('+')">
+                </div>
+    
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
