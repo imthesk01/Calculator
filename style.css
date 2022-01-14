@@ -29,10 +29,22 @@ html{
     font-size: 40px;
     border: none;
 }
+<<<<<<< HEAD
 
 .epandCalc:hover{
     background-color:darkcyan;
 } 
+=======
+.epandCalc:hover{
+    background-color:darkcyan;
+} 
+.leftarrow{
+    background: url("double-left.png") no-repeat 5px center;
+}
+.rightArrow{
+    background: url("double-right.png") no-repeat 5px center;
+}
+>>>>>>> 596619aaabae38ca63bbccb5894b56caf958f27a
 
 .displayBody{
     height: 30%;
