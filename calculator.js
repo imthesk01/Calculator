@@ -54,19 +54,19 @@ document.addEventListener('keydown', e => {
 // open scientific calculator layout
 function OpenScientificLayout() {
     if (isOpen) {
-        document.getElementById("calBody").style.width = "300px";
+        document.getElementById("calBody").style.width = "320px";
         document.getElementById("sciClacDiv").style.display = "none";
         document.getElementById("SciCalc").style.width = "25%";
-        document.getElementById("result").style.width = "70%";
+        document.getElementById("result").style.width = "70.32%";
         document.getElementById("icon1").className = "fas fa-angle-double-left"
         document.getElementById("icon1").title = "Open scientific Calculator"
         isOpen = false
     }
     else {
-        document.getElementById("calBody").style.width = "700px"
+        document.getElementById("calBody").style.width = "720px"
         document.getElementById("sciClacDiv").style.display = "block";
         document.getElementById("SciCalc").style.width = "10%";
-        document.getElementById("result").style.width = "87.8%";
+        document.getElementById("result").style.width = "87.92%";
         document.getElementById("icon1").className = "fas fa-angle-double-right"
         document.getElementById("icon1").title = "Close scientific Calculator"
         isOpen = true
@@ -74,10 +74,17 @@ function OpenScientificLayout() {
 }
 
 function append(text) {
-    document.getElementById("equation").value += text
+    //Check the value from the clicked button and move it to the textbox.
+    if (parseInt(text, 10) == text || text === "%" || text === "/" 
+        || text === "*" ||  text === "-" ||   text === "+" || text === ".") {
+            document.getElementById("equation").value += text
+    }
+
+
+    
 }
 
-function plusMinus(equation){
+function plusMinus(equation) {
     result = startEvaluation(equation)
     document.getElementById('result').value = result * -1
 }
@@ -111,15 +118,15 @@ function startEvaluation(equation) {
         }
     }
 
-    operands = operandString.split(" ")  
+    operands = operandString.split(" ")
 
-    validEq =  isValid(operands)
+    validEq = isValid(operands)
 
-    if(validEq){
-        finalResult = evaluate(operators, operands) 
+    if (validEq) {
+        finalResult = evaluate(operators, operands)
         document.getElementById("result").value = finalResult
     }
-    else{
+    else {
         document.getElementById("result").value = "Expression error"
         return
     }
@@ -134,7 +141,7 @@ function evaluate(operators, operands) {
             if (operands[indexP + 1] == "") {
                 operands[indexP + 1] = 1
             }
-            operands[indexP] = ((operands[indexP] / 100) * operands[indexP + 1] ).toFixed(2)
+            operands[indexP] = ((operands[indexP] / 100) * operands[indexP + 1]).toFixed(2)
             operands.splice(indexP + 1, 1)
             operators.splice(indexP, 1)
         }
@@ -176,9 +183,9 @@ function evaluate(operators, operands) {
     return operands[0]
 }
 
-function isValid(operands){
-    for(var i = 0; i < operands.length ; i++){
-        if( operands[i] == ''){
+function isValid(operands) {
+    for (var i = 0; i < operands.length; i++) {
+        if (operands[i] == '') {
             return false
         }
     }

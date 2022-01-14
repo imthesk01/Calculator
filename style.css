@@ -1,22 +1,18 @@
 /*  */
-/*  */
-/*  */
-/*  */
 html{
     font-family: 'Courier New', Courier, monospace;
 }
 #calBody{
     background-color: rgba(203,203,203,255);
     margin: auto;
-    height: 500px;
-    width: 300px;
-    /* 300px */
-    min-width: 300px;    
+    height: 600px;
+    width: 320px;
+    min-width: 320px;    
 }
 
 #sciClacDiv{
     width: 400px;
-    height: 374px;
+    height: 100%;
     float: left;
     display: none;
 }
@@ -33,24 +29,22 @@ html{
     font-size: 40px;
     border: none;
 }
-.leftarrow{
-    background: url("double-left.png") no-repeat 5px center;
-}
-.rightArrow{
-    background: url("double-right.png") no-repeat 5px center;
-}
+
+.epandCalc:hover{
+    background-color:darkcyan;
+} 
 
 .displayBody{
-    height: 25%;
+    height: 30%;
 }
 .InputBody{
-    height: 75%;
-    width: 300px; 
+    height: 100%;
+    width: 320px; 
     float: left;
 }
 .resultDisplay{
-    height: 97%;
-    width: 70%;
+    height: 98%;
+    width: 70.32%;
     background-color: rgba(68,68,68,255); 
     font-size: 5vh;
     color: #ffff;
@@ -70,11 +64,16 @@ html{
     text-align: right;
 }
 
-
+#operandsDiv{
+    height: 20%;
+}
+#operatorsDiv{
+    height: 20%;
+}
 .operators{
     float: left;
     background-color: rgba(102,194,255,255);
-    height: 75px;
+    height: 100%;
     width: 25%;
     font-size: 25px;
     color: #ffff;
@@ -87,7 +86,7 @@ html{
 .operands{
     float: left;
     background-color: rgba(255,255,255,255);
-    height: 75px;
+    height: 100%;
     width: 25%;
     font-size: 25px;
     border: 1px solid rgba(203,203,203,255)
@@ -96,7 +95,7 @@ html{
 .forthDiv{
     float: left;
     background-color: rgba(0,153,255,255);
-    height: 75px;
+    height: 100%;
     width: 25%;
     font-size: 25px;
     color: #ffff;
@@ -110,7 +109,7 @@ html{
 .sciLayout{
     float: left;
     background-color: rgb(212, 227, 231);
-    height: 75px;
+    height: 100%;
     width: 16.65%;
     font-size: 20px;
     border: 1px solid rgba(203,203,203,255)
@@ -118,7 +117,7 @@ html{
 .deg{
     float: left;
     background-color: rgb(212, 227, 231);
-    height: 75px;
+    height: 100%;
     width: 16.67%;
     font-size: 20px;
     font-weight: bold;
